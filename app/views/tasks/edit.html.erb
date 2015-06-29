@@ -1,0 +1,14 @@
+<h1>Edit this task brahhhh</h1>
+
+<%= render('layouts/errors', :object => @task) %>
+
+<%= form_for [@list, @task] do |f| %>
+<%= f.label :description %>
+<%= f.text_field :description %>
+<p><%= f.submit %></p>
+<% end %>
+
+<%= form_for [@list, @task] do |f| %>
+<%= f.hidden_field :done, value: true %>
+<%= f.submit "Completed" %>
+<% end %>

@@ -23,7 +23,6 @@ class ListsController < ApplicationController
     end
   end
 
-
   def edit
     @list = List.find(params[:id])
     render :edit
